@@ -1,0 +1,23 @@
+<IfModule mod_evasive20.c>
+<% if @dosemailnotify -%>
+    DOSEmailNotify <%= @dosemailnotify %>
+<% end -%>
+<% if @dospagecount -%>
+    DOSPageCount <%= @dospagecount %>
+<% end -%>
+<% if @dossitecount -%>
+    DOSSiteCount <%= @dossitecount %>
+<% end -%>
+<% if @dosblockingperiod -%>
+    DOSBlockingPeriod <%= @dosblockingperiod %>
+<% end -%>
+<% if @doslogdir -%>
+    DOSLogDir "<%= @doslogdir %>"
+<% end -%>
+<% if !@doswhitelist.empty? -%>
+<% @doswhitelist.each do |ip| -%>
+    DOSWhitelist <%= ip %>
+<% end -%>
+<% end -%>
+</IfModule>
+

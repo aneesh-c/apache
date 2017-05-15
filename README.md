@@ -108,10 +108,28 @@ Modsecurity customisation:
 
 ```puppet
 class { 'apache::modsecurity':
-    secruleengine           => 'On',
-    secrequestbodyaccess    => 'On',
-    secresponsebodyaccess   => 'On',
-    secdatadir              => undef,
+    includeoptional             => [ 'modsecurity.d/*.conf', 'modsecurity.d/activated_rules/*.conf' ],
+    secruleengine               => 'On',
+    secrequestbodyaccess        => 'On',
+    secrequestbodylimit         => '13107200',
+    secrequestbodynofileslimit  => '131072',
+    secrequestbodyinmemorylimit => '131072',
+    secrequestbodylimitaction   => 'Reject',
+    secpcrematchlimit           => '1000',
+    secpcrematchlimitrecursion  => '1000',
+    secresponsebodyaccess       => 'On',
+    secdebuglog                 => '/var/log/httpd/modsec_debug.log',
+    secdebugloglevel            => '0',
+    secauditengine              => 'RelevantOnly',
+    secauditlogrelevantstatus   => '"^(?:5|4(?!04))"',
+    secauditlogparts            => 'ABIJDEFHZ',
+    secauditlogtype             => 'Serial',
+    secauditlog                 => '/var/log/httpd/modsec_audit.log',
+    secargumentseparator        => '&',
+    seccookieformat             => '0',
+    sectmpdir                   => '/var/lib/mod_security',
+    secdatadir                  => '/tmp',
+    secresponsebodymimetype     => 'text/plain text/html text/xml application/octet-stream',
 }
 ```
 

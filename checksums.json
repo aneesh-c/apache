@@ -1,0 +1,18 @@
+{
+  "LICENSE": "ea3abe1d0358033f43557a00f6fcc43e",
+  "README.md": "8825008df8ac73a2c8095b44cd83ad1c",
+  "manifests/init.pp": "cfd1ec38f4f4b4553ea3a88fd4046326",
+  "manifests/modevasive.pp": "7ad257775b1e047f51ea9d0a7103d9b9",
+  "manifests/modsecurity.pp": "136686aab8ebd0d98518fde2e85db2b1",
+  "manifests/params.pp": "667cffb2ee001b8778606ff9f131fc89",
+  "manifests/virtualhost.pp": "0841892918ab9aceaa22b2336576e9c2",
+  "metadata.json": "ae05d04d81d691aaffe3ed20061264ef",
+  "templates/configfile.erb": "00095a6cc756874ed2b359c62e34cb41",
+  "templates/evasive.conf.u.14.erb": "99577544a840c4020f85a56cb64a1d47",
+  "templates/evasive.conf.u.16.erb": "99577544a840c4020f85a56cb64a1d47",
+  "templates/mod-evasive.conf.u.12.erb": "94b8a3f8cd2055f19e05e95392547fd9",
+  "templates/mod_evasive.conf.c.6.erb": "62f30310893c4d17bb11d40505404113",
+  "templates/mod_evasive.conf.c.7.erb": "d0e3950a61924215269365be74bc0513",
+  "templates/modsecurity.erb": "1278a7aa068b88e6e7e294702a4b26ac",
+  "templates/virtualhost.erb": "2e3fd4d67d5ca7219268065632a32b12"
+}

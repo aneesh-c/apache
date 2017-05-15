@@ -9,15 +9,12 @@ class apache::params {
     $sitesdir = '/etc/httpd/'
     case $::operatingsystemrelease {
       /^6.*/: {
-        $template_modsecurity = 'apache/mod_security.conf.c.6.erb'
         $template_modevasive = 'apache/mod_evasive.conf.c.6.erb'
       }
       /^7.*/: {
-        $template_modsecurity = 'apache/mod_security.conf.c.7.erb'
         $template_modevasive = 'apache/mod_evasive.conf.c.7.erb'
       }
       default: {
-        $template_modsecurity = 'apache/mod_security.conf.c.6.erb'
         $template_modevasive = 'apache/mod_evasive.conf.c.6.erb'
       }
     }
@@ -32,22 +29,18 @@ class apache::params {
     case $::operatingsystemrelease {
       /^12.*/: {
         $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
-        $template_modsecurity = 'apache/modsecurity.conf.u.12.erb'
         $template_modevasive = 'apache/mod-evasive.conf.u.12.erb'
       }
       /^14.*/: {
         $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
-        $template_modsecurity = 'apache/modsecurity.conf.u.14.erb'
         $template_modevasive = 'apache/evasive.conf.u.14.erb'
       }
       /^16.*/: {
         $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
-        $template_modsecurity = 'apache/modsecurity.conf.u.16.erb'
         $template_modevasive = 'apache/evasive.conf.u.16.erb'
       }
       default: {
         $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
-        $template_modsecurity = 'apache/modsecurity.conf.u.12.erb'
         $template_modevasive = 'apache/mod-evasive.conf.u.12.erb'
       }
     }

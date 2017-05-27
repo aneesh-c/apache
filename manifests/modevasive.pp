@@ -1,17 +1,23 @@
 class apache::modevasive (
   $packagename_modevasive = $::apache::params::packagename_modevasive,
   $configfile_modevasive  = $::apache::params::configfile_modevasive,
-  $template_modevasive    = $::apache::params::template_modevasive,
+  $template_modevasive    = 'apache/modevasive.erb',
+  $loadmodule             = [],
+  $ifmodule               = undef,
+  $doshashtablesize       = undef,
+  $dospagecount           = undef,
+  $dossitecount           = undef,
+  $dospageinterval        = undef,
+  $dossiteinterval        = undef,
+  $dosblockingperiod      = undef,
   $dosemailnotify         = undef,
-  $dospagecount           = '2',
-  $dossitecount           = '50',
-  $dosblockingperiod      = '10',
-  $doslogdir              = '/var/log/mod_evasive',
+  $doslogdir              = undef,
   $doswhitelist           = [],
 ){
   package { $packagename_modevasive: ensure => installed }
   file { $configfile_modevasive:
     require => package[$packagename_modevasive],
+    backup  => '.backup',
     content => template($template_modevasive),
   }
 }

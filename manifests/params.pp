@@ -15,18 +15,30 @@ class apache::params {
     $configfile = '/etc/apache2/apache2.conf'
     $configfile_modsecurity = '/etc/modsecurity/modsecurity.conf'
     $sitesdir = '/etc/apache2/'
-    case $::operatingsystemrelease {
-      /^12.*/: {
-        $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+    if $::operatingsystem == 'Ubuntu' {
+      case $::operatingsystemrelease {
+        /^12.*/: {
+          $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+        }
+        /^14.*/: {
+          $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
+        }
+        /^16.*/: {
+          $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
+        }
+        default: {
+          $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+        }
       }
-      /^14.*/: {
-        $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
-      }
-      /^16.*/: {
-        $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
-      }
-      default: {
-        $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+    }
+    if $::operatingsystem == 'Debian' {
+      case $::operatingsystemrelease {
+        /^7.*/: {
+          $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+        }
+        default: {
+          $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "aneesh-apache",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "author": "aneesh",
   "summary": "Puppet module for apache",
   "license": "Apache-2.0",
@@ -37,6 +37,12 @@
         "12.04",
         "14.04",
         "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7"
       ]
     }
   ],

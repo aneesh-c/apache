@@ -4,11 +4,11 @@
   "manifests/init.pp": "cfd1ec38f4f4b4553ea3a88fd4046326",
   "manifests/modevasive.pp": "27168831f87dff29f0d43545ebff5949",
   "manifests/modsecurity.pp": "136686aab8ebd0d98518fde2e85db2b1",
-  "manifests/params.pp": "b112524b42ca07707484d899233ad854",
+  "manifests/params.pp": "14b4ddc3ceeae8df74ea1753656d7a23",
   "manifests/virtualhost.pp": "0841892918ab9aceaa22b2336576e9c2",
-  "metadata.json": "b13f3455b05ed14a1389d5a003a31394",
+  "metadata.json": "3b37c4478900111337f8250d271c3ad0",
   "templates/configfile.erb": "00095a6cc756874ed2b359c62e34cb41",
   "templates/modevasive.erb": "0258613fd215e84a17801d548f280779",
-  "templates/modsecurity.erb": "1278a7aa068b88e6e7e294702a4b26ac",
+  "templates/modsecurity.erb": "6b4c8ab53b8341f4ef640358996f887c",
   "templates/virtualhost.erb": "2e3fd4d67d5ca7219268065632a32b12"
 }

@@ -23,15 +23,15 @@ define apache::virtualhost (
   if ! defined(File["${sitesdir}/sites-available"]) {
     file { "${sitesdir}/sites-available":
       ensure  => directory,
-      require => package[$package_name],
+      require => Package[$package_name],
     }
     file { "${sitesdir}/sites-enabled":
       ensure  => directory,
-      require => package[$package_name],
+      require => Package[$package_name],
     }
   }
   file { "${sitesdir}/sites-available/${filename}":
-    require => package[$package_name],
+    require => Package[$package_name],
     content => template($template),
   }
 }

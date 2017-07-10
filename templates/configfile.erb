@@ -846,3 +846,11 @@ Include <%= directory %>
 IncludeOptional <%= directory %>
 <% end -%>
 <% end -%>
+
+#
+# The directory where shm and other runtime files will be stored.
+#
+
+<% if @defaultruntimedir -%>
+DefaultRuntimeDir <%= @defaultruntimedir %>
+<% end -%>

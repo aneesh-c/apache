@@ -33,7 +33,7 @@ class apache::modsecurity (
 ) inherits ::apache::params {
   package { $packagename_modsecurity: ensure => installed }
   file { $configfile_modsecurity:
-    require => package[$packagename_modsecurity],
+    require => Package[$packagename_modsecurity],
     backup  => '.backup',
     content => template($template_modsecurity),
   }

@@ -1,14 +1,14 @@
 {
   "LICENSE": "ea3abe1d0358033f43557a00f6fcc43e",
   "README.md": "8825008df8ac73a2c8095b44cd83ad1c",
-  "manifests/init.pp": "cfd1ec38f4f4b4553ea3a88fd4046326",
-  "manifests/modevasive.pp": "27168831f87dff29f0d43545ebff5949",
-  "manifests/modsecurity.pp": "136686aab8ebd0d98518fde2e85db2b1",
+  "manifests/init.pp": "5a895fc8c9a7213317a91362432ff74e",
+  "manifests/modevasive.pp": "269c9d3f2ba9304303693a16c3e2d7bb",
+  "manifests/modsecurity.pp": "b79d3787d9d7f43ffd9bc77400e3f746",
   "manifests/params.pp": "b529c8a1dff2897d7cd7aa427d611b33",
-  "manifests/virtualhost.pp": "0841892918ab9aceaa22b2336576e9c2",
-  "metadata.json": "a16035d7c026c543f5a9426e183f91fd",
-  "templates/configfile.erb": "00095a6cc756874ed2b359c62e34cb41",
+  "manifests/virtualhost.pp": "04d54c7aad753584fcf1e1139d72dff9",
+  "metadata.json": "88f7e4c5ec62169d9004508994c54ac6",
+  "templates/configfile.erb": "e3e41c8a804598037aa6411440412848",
   "templates/modevasive.erb": "0258613fd215e84a17801d548f280779",
-  "templates/modsecurity.erb": "5692f8353131e2f9ea6e0d1452bde987",
+  "templates/modsecurity.erb": "305207341fd46d6ebcbdac1211fa3e08",
   "templates/virtualhost.erb": "2e3fd4d67d5ca7219268065632a32b12"
 }

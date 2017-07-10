@@ -16,7 +16,7 @@ class apache::modevasive (
 ){
   package { $packagename_modevasive: ensure => installed }
   file { $configfile_modevasive:
-    require => package[$packagename_modevasive],
+    require => Package[$packagename_modevasive],
     backup  => '.backup',
     content => template($template_modevasive),
   }

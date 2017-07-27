@@ -131,7 +131,7 @@ class apache (
   }
   if $::osfamily == 'RedHat' {
     service { 'httpd':
-      require => package[$package_name],
+      require => Package[$package_name],
       enable  => true,
     }
   }

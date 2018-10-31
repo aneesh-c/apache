@@ -26,6 +26,9 @@ class apache::params {
         /^16.*/: {
           $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
         }
+        /^18.*/: {
+          $configfile_modevasive = '/etc/apache2/mods-available/evasive.conf'
+        }
         default: {
           $configfile_modevasive = '/etc/apache2/mods-available/mod-evasive.conf'
         }

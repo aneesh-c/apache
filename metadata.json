@@ -1,6 +1,6 @@
 {
   "name": "aneesh-apache",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "author": "aneesh",
   "summary": "Puppet module for apache",
   "license": "Apache-2.0",
@@ -38,10 +38,9 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "12.04",
         "14.04",
         "16.04",
-        "17.04"
+        "18.04"
       ]
     },
     {
